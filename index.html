@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Graphiste | Designer Graphique Freelance</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Fancybox CSS (Lightbox) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <!-- SECTION PHOTO  -->
+        <div class="mb-8 relative group">
+            <!-- Cercle décoratif lumineux derrière la photo -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+            
+            <!-- La Photo elle-même -->
+            <!-- REMPLACEZ L'URL CI-DESSOUS PAR LE CHEMIN DE LA PHOTO DE VOTRE AMI -->
+            <!-- Exemple : src="images/photo-profil.jpg" -->
+            <img 
+                src="images/Othniel.jpeg" 
+                alt="Portrait du Graphiste" 
+                class="profile-photo relative rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-gray-800 shadow-2xl transition-transform duration-500 group-hover:scale-105"
+            >
+        </div>
+        <div class="max-w-3xl">
+            <span class="text-blue-500 font-semibold text-sm tracking-widest uppercase">Designer Graphique </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-3 mb-6 leading-tight">
+                Je transforme vos idées en <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">identités visuelles impactantes</span>.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-8">
+                Spécialisé en Branding, Design Publicitaire et Support Digital pour entreprises & créateurs.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#portfolio" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-blue-500/20">Voir mes réalisations</a>
+                <a href="#contact" class="bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 font-medium px-6 py-3 rounded-xl transition">Me contacter</a>
+            </div>
+        </div>
+        <div class="absolute bottom-6 animate-bounce">
+            <a href="#portfolio" class="text-gray-500 hover:text-white"><i class="fas fa-arrow-down text-2xl"></i></a>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Réalisations</h2>
+            <p class="text-gray-400">Cliquez sur une image pour l'agrandir et voir les détails</p>
+            
+            <!-- Filtres -->
+            <div class="flex flex-wrap justify-center gap-2 mt-8" id="filter-buttons">
+                <button data-category="all" class="filter-btn active px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition">Tous</button>
+                <button data-category="branding" class="filter-btn px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition hover:border-blue-500">Branding & Logo</button>
+                <button data-category="social" class="filter-btn px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition hover:border-blue-500">Social Media</button>
+                <button data-category="print" class="filter-btn px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition hover:border-blue-500">Print & Affiches</button>
+            </div>
+        </div>
+
+        <!-- Grille de Projets avec Lightbox -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+            
+            <!-- Projet 1: Branding -->
+            <div class="project-card branding bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet1.jpeg" data-fancybox="gallery" data-caption="Aura Coffee - Identité Visuelle complète (Charte graphique & packaging)" class="block overflow-hidden relative">
+                    <img src="images/projet1.jpeg" alt="Identité visuelle Café" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Branding</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Aura Coffee - Identité Visuelle</h3>
+                    <p class="text-gray-400 text-sm">Création de la charte graphique complète, logo et packaging pour une marque de café spécialisé.</p>
+                </div>
+            </div>
+
+            <!-- Projet 2: Social Media -->
+            <div class="project-card social bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet2.jpeg" data-fancybox="gallery" data-caption="Campagne Instagram Tech - Visuels carrousels" class="block overflow-hidden relative">
+                    <img src="images/projet2.jpeg" alt="Visuels Réseaux Sociaux" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Social Media</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Campagne Instagram Tech</h3>
+                    <p class="text-gray-400 text-sm">Série de carrousels et visuels promotionnels pour le lancement d'une application SaaS.</p>
+                </div>
+            </div>
+
+            <!-- Projet 3: Print -->
+            <div class="project-card print bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet3.jpeg" data-fancybox="gallery" data-caption="Festival Jazz & Sun - Affiche grand format & déclinaisons" class="block overflow-hidden relative">
+                    <img src="images/projet3.jpeg" alt="Affiche d'événement" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Print</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Festival "Jazz & Sun" - Affiche</h3>
+                    <p class="text-gray-400 text-sm">Conception d'affiches grand format, dépliants et bannières pour un festival de musique.</p>
+                </div>
+            </div>
+
+            <!-- Projet 4: Branding -->
+            <div class="project-card branding bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet4.jpeg" data-fancybox="gallery" data-caption="Lumina Cosmetics - Refonte d'image globale" class="block overflow-hidden relative">
+                    <img src="images/projet4.jpeg" alt="Design de Logo" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Branding</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Lumina Cosmetics</h3>
+                    <p class="text-gray-400 text-sm">Refonte d'image de marque haut de gamme pour des produits cosmétiques bio.</p>
+                </div>
+            </div>
+
+            <!-- Projet 5: Social Media -->
+            <div class="project-card social bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet5.jpeg" data-fancybox="gallery" data-caption="Pack Bannières E-commerce - Publicités optimisées conversions" class="block overflow-hidden relative">
+                    <img src="images/projet5.jpeg" alt="Templates Réseaux" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Social Media</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Pack Bannières E-commerce</h3>
+                    <p class="text-gray-400 text-sm">Design de bannières publicitaires Facebook Ads et Google Display à fort taux de conversion.</p>
+                </div>
+            </div>
+
+            <!-- Projet 6: Print -->
+            <div class="project-card print bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet6.jpeg" data-fancybox="gallery" data-caption="Brochure Corporate - Édition & Rapport d'entreprise" class="block overflow-hidden relative">
+                    <img src="images/projet6.jpeg" alt="Brochure d'entreprise" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Print</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Brochure Corporate 16 Pages</h3>
+                    <p class="text-gray-400 text-sm">Mise en page éditoriale et rapport annuel d'entreprise pour un cabinet de conseil.</p>
+                </div>
+            </div>
+
+
+            <!-- Projet 7: Print -->
+            <div class="project-card print bg-gray-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition duration-300 group">
+                <a href="images/projet7.jpeg" data-fancybox="gallery" data-caption="Brochure Corporate - Édition & Rapport d'entreprise" class="block overflow-hidden relative">
+                    <img src="images/projet7.jpeg" alt="Brochure d'entreprise" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="bg-gray-900/80 text-white p-3 rounded-full"><i class="fas fa-search-plus text-xl"></i></span>
+                    </div>
+                </a>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Print</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Autocollant</h3>
+                    <p class="text-gray-400 text-sm">Mise en page éditoriale et rapport annuel d'entreprise pour un cabinet de conseil.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services / Compétences -->
+    <section class="py-16 bg-gray-800/50 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Logiciels & Compétences</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <i class="fas fa-pen-nib text-3xl text-blue-400 mb-3"></i>
+                    <h4 class="font-semibold">Photoshop</h4>
+                    <p class="text-xs text-gray-400 mt-1">Retouche & Composition</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <i class="fas fa-vector-square text-3xl text-orange-400 mb-3"></i>
+                    <h4 class="font-semibold">Illustrator</h4>
+                    <p class="text-xs text-gray-400 mt-1">Vectoriel & Logos</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <i class="fas fa-book-open text-3xl text-pink-400 mb-3"></i>
+                    <h4 class="font-semibold">InDesign</h4>
+                    <p class="text-xs text-gray-400 mt-1">Mise en page & Print</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <i class="fab fa-figma text-3xl text-purple-400 mb-3"></i>
+                    <h4 class="font-semibold">Figma</h4>
+                    <p class="text-xs text-gray-400 mt-1">UI Design & Maquettes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-16 px-4 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Un projet en tête ?</h2>
+        <p class="text-gray-400 mb-8">Disponible pour des missions en freelance ou des opportunités en télétravail.</p>
+        
+        <div class="flex flex-wrap justify-center items-center gap-6 mb-12">
+            <a href="mailto:orthinielylonfoun69@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded-xl transition flex items-center gap-2">
+                <i class="fas fa-envelope"></i> Me contacter par Email
+            </a>
+           
+        </div>
+
+        <div class="flex justify-center gap-6 text-2xl text-gray-400">
+            
+            <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/22964696759" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Contacter sur WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-xs text-gray-600 mt-8">© 2026 - Portfolio Designer Graphique. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Fancybox JS (Lightbox Script) -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

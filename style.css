@@ -1,0 +1,8 @@
+.profile-photo {
+    object-position: center 30%;
+}
+
+.filter-btn.active {
+    background-color: #2563eb;
+    color: white;
+}
